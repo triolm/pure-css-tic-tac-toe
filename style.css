@@ -6,6 +6,7 @@
 }
 
 
+
 div.container {
     display: flex;
     flex-direction: row;
@@ -67,6 +68,10 @@ input {
 label {
     z-index: var(--og-index);
     border-radius: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 input:checked~br~label {
