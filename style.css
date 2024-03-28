@@ -1,5 +1,5 @@
-:root{
-    --red:#ed3326;
+:root {
+    --red: #ed3326;
     --blue: #2654ed;
     --light-blue: #5f80ed;
     --light-red: #ed5f5f;
@@ -16,9 +16,9 @@ div.container {
     left: calc(50% - 300px/2);
 }
 
-.title{
+.title {
     font-size: 30;
-    top:30px;
+    top: 30px;
     position: absolute;
 }
 
@@ -155,38 +155,14 @@ input:checked+label.o {
     position: absolute;
 }
 
-input.slot-1:checked~div.cover.slot-1 {
-    z-index: 99999;
-}
-
-input.slot-2:checked~div.cover.slot-2 {
-    z-index: 99999;
-}
-
-input.slot-3:checked~div.cover.slot-3 {
-    z-index: 99999;
-}
-
-input.slot-4:checked~div.cover.slot-4 {
-    z-index: 99999;
-}
-
-input.slot-5:checked~div.cover.slot-5 {
-    z-index: 99999;
-}
-
-input.slot-6:checked~div.cover.slot-6 {
-    z-index: 99999;
-}
-
-input.slot-7:checked~div.cover.slot-7 {
-    z-index: 99999;
-}
-
-input.slot-8:checked~div.cover.slot-8 {
-    z-index: 99999;
-}
-
+input.slot-1:checked~div.cover.slot-1,
+input.slot-2:checked~div.cover.slot-2,
+input.slot-3:checked~div.cover.slot-3,
+input.slot-4:checked~div.cover.slot-4,
+input.slot-5:checked~div.cover.slot-5,
+input.slot-6:checked~div.cover.slot-6,
+input.slot-7:checked~div.cover.slot-7,
+input.slot-8:checked~div.cover.slot-8,
 input.slot-9:checked~div.cover.slot-9 {
     z-index: 99999;
 }
@@ -197,49 +173,42 @@ input.x.slot-2:checked~input.x.slot-1:checked~input.x.slot-3:checked~div.x-win,
 input.x.slot-2:checked~input.x.slot-3:checked~input.x.slot-1:checked~div.x-win,
 input.x.slot-3:checked~input.x.slot-1:checked~input.x.slot-2:checked~div.x-win,
 input.x.slot-3:checked~input.x.slot-2:checked~input.x.slot-1:checked~div.x-win,
-
 input.x.slot-5:checked~input.x.slot-4:checked~input.x.slot-6:checked~div.x-win,
 input.x.slot-5:checked~input.x.slot-6:checked~input.x.slot-4:checked~div.x-win,
 input.x.slot-4:checked~input.x.slot-5:checked~input.x.slot-6:checked~div.x-win,
 input.x.slot-4:checked~input.x.slot-6:checked~input.x.slot-5:checked~div.x-win,
 input.x.slot-6:checked~input.x.slot-5:checked~input.x.slot-4:checked~div.x-win,
 input.x.slot-6:checked~input.x.slot-4:checked~input.x.slot-5:checked~div.x-win,
-
 input.x.slot-7:checked~input.x.slot-8:checked~input.x.slot-9:checked~div.x-win,
 input.x.slot-7:checked~input.x.slot-9:checked~input.x.slot-8:checked~div.x-win,
 input.x.slot-8:checked~input.x.slot-7:checked~input.x.slot-9:checked~div.x-win,
 input.x.slot-8:checked~input.x.slot-9:checked~input.x.slot-7:checked~div.x-win,
 input.x.slot-9:checked~input.x.slot-7:checked~input.x.slot-8:checked~div.x-win,
 input.x.slot-9:checked~input.x.slot-8:checked~input.x.slot-7:checked~div.x-win,
-
 input.x.slot-7:checked~input.x.slot-4:checked~input.x.slot-1:checked~div.x-win,
 input.x.slot-7:checked~input.x.slot-1:checked~input.x.slot-4:checked~div.x-win,
 input.x.slot-4:checked~input.x.slot-7:checked~input.x.slot-1:checked~div.x-win,
 input.x.slot-4:checked~input.x.slot-1:checked~input.x.slot-7:checked~div.x-win,
 input.x.slot-1:checked~input.x.slot-7:checked~input.x.slot-4:checked~div.x-win,
 input.x.slot-1:checked~input.x.slot-4:checked~input.x.slot-7:checked~div.x-win,
-
 input.x.slot-2:checked~input.x.slot-5:checked~input.x.slot-8:checked~div.x-win,
 input.x.slot-2:checked~input.x.slot-8:checked~input.x.slot-5:checked~div.x-win,
 input.x.slot-5:checked~input.x.slot-2:checked~input.x.slot-8:checked~div.x-win,
 input.x.slot-5:checked~input.x.slot-8:checked~input.x.slot-2:checked~div.x-win,
 input.x.slot-8:checked~input.x.slot-2:checked~input.x.slot-5:checked~div.x-win,
 input.x.slot-8:checked~input.x.slot-5:checked~input.x.slot-2:checked~div.x-win,
-
 input.x.slot-3:checked~input.x.slot-6:checked~input.x.slot-9:checked~div.x-win,
 input.x.slot-3:checked~input.x.slot-9:checked~input.x.slot-6:checked~div.x-win,
 input.x.slot-6:checked~input.x.slot-3:checked~input.x.slot-9:checked~div.x-win,
 input.x.slot-6:checked~input.x.slot-9:checked~input.x.slot-3:checked~div.x-win,
 input.x.slot-9:checked~input.x.slot-3:checked~input.x.slot-6:checked~div.x-win,
 input.x.slot-9:checked~input.x.slot-6:checked~input.x.slot-3:checked~div.x-win,
-
 input.x.slot-1:checked~input.x.slot-5:checked~input.x.slot-9:checked~div.x-win,
 input.x.slot-1:checked~input.x.slot-9:checked~input.x.slot-5:checked~div.x-win,
 input.x.slot-5:checked~input.x.slot-1:checked~input.x.slot-9:checked~div.x-win,
 input.x.slot-5:checked~input.x.slot-9:checked~input.x.slot-1:checked~div.x-win,
 input.x.slot-9:checked~input.x.slot-1:checked~input.x.slot-5:checked~div.x-win,
 input.x.slot-9:checked~input.x.slot-5:checked~input.x.slot-1:checked~div.x-win,
-
 input.x.slot-3:checked~input.x.slot-5:checked~input.x.slot-7:checked~div.x-win,
 input.x.slot-3:checked~input.x.slot-7:checked~input.x.slot-5:checked~div.x-win,
 input.x.slot-5:checked~input.x.slot-3:checked~input.x.slot-7:checked~div.x-win,
@@ -258,49 +227,42 @@ input.o.slot-2:checked~input.o.slot-1:checked~input.o.slot-3:checked~div.o-win,
 input.o.slot-2:checked~input.o.slot-3:checked~input.o.slot-1:checked~div.o-win,
 input.o.slot-3:checked~input.o.slot-1:checked~input.o.slot-2:checked~div.o-win,
 input.o.slot-3:checked~input.o.slot-2:checked~input.o.slot-1:checked~div.o-win,
-
 input.o.slot-5:checked~input.o.slot-4:checked~input.o.slot-6:checked~div.o-win,
 input.o.slot-5:checked~input.o.slot-6:checked~input.o.slot-4:checked~div.o-win,
 input.o.slot-4:checked~input.o.slot-5:checked~input.o.slot-6:checked~div.o-win,
 input.o.slot-4:checked~input.o.slot-6:checked~input.o.slot-5:checked~div.o-win,
 input.o.slot-6:checked~input.o.slot-5:checked~input.o.slot-4:checked~div.o-win,
 input.o.slot-6:checked~input.o.slot-4:checked~input.o.slot-5:checked~div.o-win,
-
 input.o.slot-7:checked~input.o.slot-8:checked~input.o.slot-9:checked~div.o-win,
 input.o.slot-7:checked~input.o.slot-9:checked~input.o.slot-8:checked~div.o-win,
 input.o.slot-8:checked~input.o.slot-7:checked~input.o.slot-9:checked~div.o-win,
 input.o.slot-8:checked~input.o.slot-9:checked~input.o.slot-7:checked~div.o-win,
 input.o.slot-9:checked~input.o.slot-7:checked~input.o.slot-8:checked~div.o-win,
 input.o.slot-9:checked~input.o.slot-8:checked~input.o.slot-7:checked~div.o-win,
-
 input.o.slot-7:checked~input.o.slot-4:checked~input.o.slot-1:checked~div.o-win,
 input.o.slot-7:checked~input.o.slot-1:checked~input.o.slot-4:checked~div.o-win,
 input.o.slot-4:checked~input.o.slot-7:checked~input.o.slot-1:checked~div.o-win,
 input.o.slot-4:checked~input.o.slot-1:checked~input.o.slot-7:checked~div.o-win,
 input.o.slot-1:checked~input.o.slot-7:checked~input.o.slot-4:checked~div.o-win,
 input.o.slot-1:checked~input.o.slot-4:checked~input.o.slot-7:checked~div.o-win,
-
 input.o.slot-2:checked~input.o.slot-5:checked~input.o.slot-8:checked~div.o-win,
 input.o.slot-2:checked~input.o.slot-8:checked~input.o.slot-5:checked~div.o-win,
 input.o.slot-5:checked~input.o.slot-2:checked~input.o.slot-8:checked~div.o-win,
 input.o.slot-5:checked~input.o.slot-8:checked~input.o.slot-2:checked~div.o-win,
 input.o.slot-8:checked~input.o.slot-2:checked~input.o.slot-5:checked~div.o-win,
 input.o.slot-8:checked~input.o.slot-5:checked~input.o.slot-2:checked~div.o-win,
-
 input.o.slot-3:checked~input.o.slot-6:checked~input.o.slot-9:checked~div.o-win,
 input.o.slot-3:checked~input.o.slot-9:checked~input.o.slot-6:checked~div.o-win,
 input.o.slot-6:checked~input.o.slot-3:checked~input.o.slot-9:checked~div.o-win,
 input.o.slot-6:checked~input.o.slot-9:checked~input.o.slot-3:checked~div.o-win,
 input.o.slot-9:checked~input.o.slot-3:checked~input.o.slot-6:checked~div.o-win,
 input.o.slot-9:checked~input.o.slot-6:checked~input.o.slot-3:checked~div.o-win,
-
 input.o.slot-1:checked~input.o.slot-5:checked~input.o.slot-9:checked~div.o-win,
 input.o.slot-1:checked~input.o.slot-9:checked~input.o.slot-5:checked~div.o-win,
 input.o.slot-5:checked~input.o.slot-1:checked~input.o.slot-9:checked~div.o-win,
 input.o.slot-5:checked~input.o.slot-9:checked~input.o.slot-1:checked~div.o-win,
 input.o.slot-9:checked~input.o.slot-1:checked~input.o.slot-5:checked~div.o-win,
 input.o.slot-9:checked~input.o.slot-5:checked~input.o.slot-1:checked~div.o-win,
-
 input.o.slot-3:checked~input.o.slot-5:checked~input.o.slot-7:checked~div.o-win,
 input.o.slot-3:checked~input.o.slot-7:checked~input.o.slot-5:checked~div.o-win,
 input.o.slot-5:checked~input.o.slot-3:checked~input.o.slot-7:checked~div.o-win,
@@ -334,7 +296,7 @@ input:checked~input:checked~input:checked~input:checked~input:checked~input:chec
     padding: 0;
     margin: 30px;
     margin-top: 45px;
-    background-color: #ffffffee;
+    background-color: #ffffff;
     position: absolute;
     top: 0;
     left: 0;
