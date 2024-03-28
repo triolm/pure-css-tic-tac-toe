@@ -3,28 +3,31 @@
     --blue: #2654ed;
     --light-blue: #5f80ed;
     --light-red: #ed5f5f;
+    --cell-size:140px;
+    --padding: 10px;
 }
 
-
+@media (max-width: 600px) {
+    :root {
+        --cell-size:20vw;
+        --padding: 2vw;
+    }
+  }
 
 div.container {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    flex-wrap: wrap;
-    width: 50%;
-    top: 12vh;
-    left: calc(50% - 300px/2);
+    position:relative;
 }
 
 .title {
     font-size: 30;
     top: 30px;
-    position: absolute;
+    margin: 20px;
+    text-align: center;
 }
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
@@ -44,25 +47,31 @@ input {
 .grid-item:nth-of-type(9n+4),
 .grid-item:nth-of-type(9n+5),
 .grid-item:nth-of-type(9n+6) {
-    top: 100;
+    top: calc(var(--cell-size) + var(--padding));
 }
 
 .grid-item:nth-of-type(9n+7),
 .grid-item:nth-of-type(9n+8),
 .grid-item:nth-of-type(9n+9) {
-    top: 200;
+    top: calc(2 * var(--cell-size) + 2 * var(--padding));
+}
+
+.grid-item:nth-of-type(9n+1),
+.grid-item:nth-of-type(9n+4),
+.grid-item:nth-of-type(9n+7) {
+    left: calc((var(--cell-size)* -1.5) - var(--padding));
 }
 
 .grid-item:nth-of-type(9n+2),
 .grid-item:nth-of-type(9n+5),
 .grid-item:nth-of-type(9n+8) {
-    left: 100;
+    left: calc(var(--cell-size)/-2 );
 }
 
 .grid-item:nth-of-type(9n+3),
 .grid-item:nth-of-type(9n+6),
 .grid-item:nth-of-type(9n+9) {
-    left: 200;
+    left: calc(var(--cell-size)/2 + var(--padding));
 }
 
 label {
@@ -113,15 +122,14 @@ input:checked~input:checked~input:checked~input:checked~input:checked~input:chec
 label {
     position: absolute;
     pointer-events: auto;
-    line-height: 80px;
-    font-size: 90px;
-    width: 90px;
-    height: 90px;
+    line-height: calc(var(--cell-size) * .9);
+    font-size: var(--cell-size);
+    width: var(--cell-size);
+    height: var(--cell-size);
     background-color: lightgray;
     color: lightgray;
     display: inline-block;
     text-align: center;
-    margin: 5px;
 }
 
 input:checked+label {
@@ -150,9 +158,8 @@ input:checked+label.o {
 }
 
 .cover {
-    width: 90px;
-    height: 90px;
-    margin: 5px;
+    width: var(--cell-size);
+    height: var(--cell-size);
     opacity: 0;
     pointer-events: auto;
     z-index: -9999;
@@ -287,11 +294,11 @@ input:checked~input:checked~input:checked~input:checked~input:checked~input:chec
 .draw {
     z-index: 999999;
     display: none;
-    width: 300px;
-    height: 300px;
+    width: calc(3 * var(--cell-size) + 2 * var(--padding));
+    height: calc(3 * var(--cell-size) + 2 * var(--padding));
     position: absolute;
     top: 0;
-    left: 0;
+    left: calc((3 * var(--cell-size) + 2 * var(--padding)) / -2);
 }
 
 .txt {
@@ -299,26 +306,25 @@ input:checked~input:checked~input:checked~input:checked~input:checked~input:chec
     display: flex;
     z-index: 999;
     padding: 0;
-    margin: 30px;
-    margin-top: 45px;
+    margin: calc(var(--cell-size)/2);
     background-color: #ffffff;
     position: absolute;
     top: 0;
     left: 0;
-    height: 200px;
-    width: 230px;
+    height: calc(2 * var(--cell-size) + 2 * var(--padding));
+    width: calc(2 * var(--cell-size) + 2 * var(--padding));
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 40px;
+    font-size: calc(var(--cell-size)/2.5);
     pointer-events: auto;
 }
 
 a {
     background: lightgray;
     opacity: 1;
-    font-size: 24px;
-    padding: 10px;
+    font-size: calc(var(--cell-size)/4);
+        padding: calc(var(--padding) * 1.5);
     text-decoration: none;
     color: black;
     margin-top: 5px;
