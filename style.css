@@ -1,0 +1,359 @@
+:root{
+    --red:#ed3326;
+    --blue: #2654ed;
+    --light-blue: #5f80ed;
+    --light-red: #ed5f5f;
+}
+
+
+div.container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    flex-wrap: wrap;
+    width: 50%;
+    top: 12vh;
+    left: calc(50% - 300px/2);
+}
+
+.title{
+    font-size: 30;
+    top:30px;
+    position: absolute;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+input {
+    display: none;
+    pointer-events: none;
+}
+
+.grid-item:nth-of-type(9n+1),
+.grid-item:nth-of-type(9n+2),
+.grid-item:nth-of-type(9n+3) {
+    top: 0;
+}
+
+.grid-item:nth-of-type(9n+4),
+.grid-item:nth-of-type(9n+5),
+.grid-item:nth-of-type(9n+6) {
+    top: 100;
+}
+
+.grid-item:nth-of-type(9n+7),
+.grid-item:nth-of-type(9n+8),
+.grid-item:nth-of-type(9n+9) {
+    top: 200;
+}
+
+.grid-item:nth-of-type(9n+2),
+.grid-item:nth-of-type(9n+5),
+.grid-item:nth-of-type(9n+8) {
+    left: 100;
+}
+
+.grid-item:nth-of-type(9n+3),
+.grid-item:nth-of-type(9n+6),
+.grid-item:nth-of-type(9n+9) {
+    left: 200;
+}
+
+label {
+    z-index: var(--og-index);
+    border-radius: 10px;
+}
+
+input:checked~br~label {
+    z-index: calc(var(--og-index) + 2);
+}
+
+input:checked~input:checked~br~label {
+    z-index: calc(var(--og-index) + 3);
+}
+
+input:checked~input:checked~input:checked~br~label {
+    z-index: calc(var(--og-index) + 4);
+}
+
+input:checked~input:checked~input:checked~input:checked~br~label {
+    z-index: calc(var(--og-index) + 5);
+}
+
+input:checked~input:checked~input:checked~input:checked~input:checked~br~label {
+    z-index: calc(var(--og-index) + 6);
+}
+
+input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~br~label {
+    z-index: calc(var(--og-index) + 7);
+}
+
+input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~br~label {
+    z-index: calc(var(--og-index) + 8);
+}
+
+input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~br~label {
+    z-index: calc(var(--og-index) + 9);
+}
+
+input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~br~label {
+    z-index: calc(var(--og-index) + 10);
+}
+
+label {
+    position: absolute;
+    pointer-events: auto;
+    line-height: 80px;
+    font-size: 90px;
+    width: 90px;
+    height: 90px;
+    background-color: lightgray;
+    color: lightgray;
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+}
+
+input:checked+label {
+    pointer-events: none;
+    z-index: 999 !important;
+    color: lightgray;
+}
+
+label.x:hover {
+    color: var(--light-red);
+}
+
+label.o:hover {
+    color: var(--light-blue);
+}
+
+input:checked+label.x {
+    background-color: var(--red);
+    color: lightgray;
+
+}
+
+input:checked+label.o {
+    background-color: var(--blue);
+    color: lightgray;
+}
+
+.cover {
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    opacity: 0;
+    pointer-events: auto;
+    z-index: -9999;
+    /* background-color: green; */
+    position: absolute;
+}
+
+input.slot-1:checked~div.cover.slot-1 {
+    z-index: 99999;
+}
+
+input.slot-2:checked~div.cover.slot-2 {
+    z-index: 99999;
+}
+
+input.slot-3:checked~div.cover.slot-3 {
+    z-index: 99999;
+}
+
+input.slot-4:checked~div.cover.slot-4 {
+    z-index: 99999;
+}
+
+input.slot-5:checked~div.cover.slot-5 {
+    z-index: 99999;
+}
+
+input.slot-6:checked~div.cover.slot-6 {
+    z-index: 99999;
+}
+
+input.slot-7:checked~div.cover.slot-7 {
+    z-index: 99999;
+}
+
+input.slot-8:checked~div.cover.slot-8 {
+    z-index: 99999;
+}
+
+input.slot-9:checked~div.cover.slot-9 {
+    z-index: 99999;
+}
+
+input.x.slot-1:checked~input.x.slot-2:checked~input.x.slot-3:checked~div.x-win,
+input.x.slot-1:checked~input.x.slot-3:checked~input.x.slot-2:checked~div.x-win,
+input.x.slot-2:checked~input.x.slot-1:checked~input.x.slot-3:checked~div.x-win,
+input.x.slot-2:checked~input.x.slot-3:checked~input.x.slot-1:checked~div.x-win,
+input.x.slot-3:checked~input.x.slot-1:checked~input.x.slot-2:checked~div.x-win,
+input.x.slot-3:checked~input.x.slot-2:checked~input.x.slot-1:checked~div.x-win,
+
+input.x.slot-5:checked~input.x.slot-4:checked~input.x.slot-6:checked~div.x-win,
+input.x.slot-5:checked~input.x.slot-6:checked~input.x.slot-4:checked~div.x-win,
+input.x.slot-4:checked~input.x.slot-5:checked~input.x.slot-6:checked~div.x-win,
+input.x.slot-4:checked~input.x.slot-6:checked~input.x.slot-5:checked~div.x-win,
+input.x.slot-6:checked~input.x.slot-5:checked~input.x.slot-4:checked~div.x-win,
+input.x.slot-6:checked~input.x.slot-4:checked~input.x.slot-5:checked~div.x-win,
+
+input.x.slot-7:checked~input.x.slot-8:checked~input.x.slot-9:checked~div.x-win,
+input.x.slot-7:checked~input.x.slot-9:checked~input.x.slot-8:checked~div.x-win,
+input.x.slot-8:checked~input.x.slot-7:checked~input.x.slot-9:checked~div.x-win,
+input.x.slot-8:checked~input.x.slot-9:checked~input.x.slot-7:checked~div.x-win,
+input.x.slot-9:checked~input.x.slot-7:checked~input.x.slot-8:checked~div.x-win,
+input.x.slot-9:checked~input.x.slot-8:checked~input.x.slot-7:checked~div.x-win,
+
+input.x.slot-7:checked~input.x.slot-4:checked~input.x.slot-1:checked~div.x-win,
+input.x.slot-7:checked~input.x.slot-1:checked~input.x.slot-4:checked~div.x-win,
+input.x.slot-4:checked~input.x.slot-7:checked~input.x.slot-1:checked~div.x-win,
+input.x.slot-4:checked~input.x.slot-1:checked~input.x.slot-7:checked~div.x-win,
+input.x.slot-1:checked~input.x.slot-7:checked~input.x.slot-4:checked~div.x-win,
+input.x.slot-1:checked~input.x.slot-4:checked~input.x.slot-7:checked~div.x-win,
+
+input.x.slot-2:checked~input.x.slot-5:checked~input.x.slot-8:checked~div.x-win,
+input.x.slot-2:checked~input.x.slot-8:checked~input.x.slot-5:checked~div.x-win,
+input.x.slot-5:checked~input.x.slot-2:checked~input.x.slot-8:checked~div.x-win,
+input.x.slot-5:checked~input.x.slot-8:checked~input.x.slot-2:checked~div.x-win,
+input.x.slot-8:checked~input.x.slot-2:checked~input.x.slot-5:checked~div.x-win,
+input.x.slot-8:checked~input.x.slot-5:checked~input.x.slot-2:checked~div.x-win,
+
+input.x.slot-3:checked~input.x.slot-6:checked~input.x.slot-9:checked~div.x-win,
+input.x.slot-3:checked~input.x.slot-9:checked~input.x.slot-6:checked~div.x-win,
+input.x.slot-6:checked~input.x.slot-3:checked~input.x.slot-9:checked~div.x-win,
+input.x.slot-6:checked~input.x.slot-9:checked~input.x.slot-3:checked~div.x-win,
+input.x.slot-9:checked~input.x.slot-3:checked~input.x.slot-6:checked~div.x-win,
+input.x.slot-9:checked~input.x.slot-6:checked~input.x.slot-3:checked~div.x-win,
+
+input.x.slot-1:checked~input.x.slot-5:checked~input.x.slot-9:checked~div.x-win,
+input.x.slot-1:checked~input.x.slot-9:checked~input.x.slot-5:checked~div.x-win,
+input.x.slot-5:checked~input.x.slot-1:checked~input.x.slot-9:checked~div.x-win,
+input.x.slot-5:checked~input.x.slot-9:checked~input.x.slot-1:checked~div.x-win,
+input.x.slot-9:checked~input.x.slot-1:checked~input.x.slot-5:checked~div.x-win,
+input.x.slot-9:checked~input.x.slot-5:checked~input.x.slot-1:checked~div.x-win,
+
+input.x.slot-3:checked~input.x.slot-5:checked~input.x.slot-7:checked~div.x-win,
+input.x.slot-3:checked~input.x.slot-7:checked~input.x.slot-5:checked~div.x-win,
+input.x.slot-5:checked~input.x.slot-3:checked~input.x.slot-7:checked~div.x-win,
+input.x.slot-5:checked~input.x.slot-7:checked~input.x.slot-3:checked~div.x-win,
+input.x.slot-7:checked~input.x.slot-3:checked~input.x.slot-5:checked~div.x-win,
+input.x.slot-7:checked~input.x.slot-5:checked~input.x.slot-3:checked~div.x-win {
+    color: var(--red);
+    display: flex;
+}
+
+
+
+input.o.slot-1:checked~input.o.slot-2:checked~input.o.slot-3:checked~div.o-win,
+input.o.slot-1:checked~input.o.slot-3:checked~input.o.slot-2:checked~div.o-win,
+input.o.slot-2:checked~input.o.slot-1:checked~input.o.slot-3:checked~div.o-win,
+input.o.slot-2:checked~input.o.slot-3:checked~input.o.slot-1:checked~div.o-win,
+input.o.slot-3:checked~input.o.slot-1:checked~input.o.slot-2:checked~div.o-win,
+input.o.slot-3:checked~input.o.slot-2:checked~input.o.slot-1:checked~div.o-win,
+
+input.o.slot-5:checked~input.o.slot-4:checked~input.o.slot-6:checked~div.o-win,
+input.o.slot-5:checked~input.o.slot-6:checked~input.o.slot-4:checked~div.o-win,
+input.o.slot-4:checked~input.o.slot-5:checked~input.o.slot-6:checked~div.o-win,
+input.o.slot-4:checked~input.o.slot-6:checked~input.o.slot-5:checked~div.o-win,
+input.o.slot-6:checked~input.o.slot-5:checked~input.o.slot-4:checked~div.o-win,
+input.o.slot-6:checked~input.o.slot-4:checked~input.o.slot-5:checked~div.o-win,
+
+input.o.slot-7:checked~input.o.slot-8:checked~input.o.slot-9:checked~div.o-win,
+input.o.slot-7:checked~input.o.slot-9:checked~input.o.slot-8:checked~div.o-win,
+input.o.slot-8:checked~input.o.slot-7:checked~input.o.slot-9:checked~div.o-win,
+input.o.slot-8:checked~input.o.slot-9:checked~input.o.slot-7:checked~div.o-win,
+input.o.slot-9:checked~input.o.slot-7:checked~input.o.slot-8:checked~div.o-win,
+input.o.slot-9:checked~input.o.slot-8:checked~input.o.slot-7:checked~div.o-win,
+
+input.o.slot-7:checked~input.o.slot-4:checked~input.o.slot-1:checked~div.o-win,
+input.o.slot-7:checked~input.o.slot-1:checked~input.o.slot-4:checked~div.o-win,
+input.o.slot-4:checked~input.o.slot-7:checked~input.o.slot-1:checked~div.o-win,
+input.o.slot-4:checked~input.o.slot-1:checked~input.o.slot-7:checked~div.o-win,
+input.o.slot-1:checked~input.o.slot-7:checked~input.o.slot-4:checked~div.o-win,
+input.o.slot-1:checked~input.o.slot-4:checked~input.o.slot-7:checked~div.o-win,
+
+input.o.slot-2:checked~input.o.slot-5:checked~input.o.slot-8:checked~div.o-win,
+input.o.slot-2:checked~input.o.slot-8:checked~input.o.slot-5:checked~div.o-win,
+input.o.slot-5:checked~input.o.slot-2:checked~input.o.slot-8:checked~div.o-win,
+input.o.slot-5:checked~input.o.slot-8:checked~input.o.slot-2:checked~div.o-win,
+input.o.slot-8:checked~input.o.slot-2:checked~input.o.slot-5:checked~div.o-win,
+input.o.slot-8:checked~input.o.slot-5:checked~input.o.slot-2:checked~div.o-win,
+
+input.o.slot-3:checked~input.o.slot-6:checked~input.o.slot-9:checked~div.o-win,
+input.o.slot-3:checked~input.o.slot-9:checked~input.o.slot-6:checked~div.o-win,
+input.o.slot-6:checked~input.o.slot-3:checked~input.o.slot-9:checked~div.o-win,
+input.o.slot-6:checked~input.o.slot-9:checked~input.o.slot-3:checked~div.o-win,
+input.o.slot-9:checked~input.o.slot-3:checked~input.o.slot-6:checked~div.o-win,
+input.o.slot-9:checked~input.o.slot-6:checked~input.o.slot-3:checked~div.o-win,
+
+input.o.slot-1:checked~input.o.slot-5:checked~input.o.slot-9:checked~div.o-win,
+input.o.slot-1:checked~input.o.slot-9:checked~input.o.slot-5:checked~div.o-win,
+input.o.slot-5:checked~input.o.slot-1:checked~input.o.slot-9:checked~div.o-win,
+input.o.slot-5:checked~input.o.slot-9:checked~input.o.slot-1:checked~div.o-win,
+input.o.slot-9:checked~input.o.slot-1:checked~input.o.slot-5:checked~div.o-win,
+input.o.slot-9:checked~input.o.slot-5:checked~input.o.slot-1:checked~div.o-win,
+
+input.o.slot-3:checked~input.o.slot-5:checked~input.o.slot-7:checked~div.o-win,
+input.o.slot-3:checked~input.o.slot-7:checked~input.o.slot-5:checked~div.o-win,
+input.o.slot-5:checked~input.o.slot-3:checked~input.o.slot-7:checked~div.o-win,
+input.o.slot-5:checked~input.o.slot-7:checked~input.o.slot-3:checked~div.o-win,
+input.o.slot-7:checked~input.o.slot-3:checked~input.o.slot-5:checked~div.o-win,
+input.o.slot-7:checked~input.o.slot-5:checked~input.o.slot-3:checked~div.o-win {
+    color: var(--blue);
+    display: flex;
+}
+
+input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~input:checked~.draw {
+    display: flex;
+}
+
+.x-win,
+.o-win,
+.draw {
+    z-index: 999999;
+    display: none;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.txt {
+    border-radius: 10px;
+    display: flex;
+    z-index: 999;
+    padding: 0;
+    margin: 30px;
+    margin-top: 45px;
+    background-color: #ffffffee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 230px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    pointer-events: auto;
+}
+
+a {
+    background: lightgray;
+    opacity: 1;
+    font-size: 24px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    margin-top: 5px;
+    border-radius: 5px;
+}
